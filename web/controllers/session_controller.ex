@@ -10,11 +10,15 @@ defmodule Webchat.SessionController do
     if valid do
       conn
       |> Guardian.Plug.sign_in(user)
-      |> redirect(to: "/")
+#      |> Plug.Conn.put_session(:user_id, user.id)
+#      |> Plug.Conn.assign(:current_user, user)
+      |> redirect  to: "/", current_user: user
     else
       conn
       |> put_flash(:error, "Incorrect password or username")
       |> render :new
     end
   end
+
+
 end

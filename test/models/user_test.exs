@@ -3,8 +3,8 @@ defmodule Webchat.UserTest do
 
   alias Webchat.User
 
-  @valid_attrs %{encrypted_password: "some encrypted_password", username: "some username"}
-  @invalid_attrs %{}
+  @valid_attrs %{password: "12345678Aa", username: "some"}
+  @invalid_attrs %{password: "1", username: "popd j"}
 
   test "changeset with valid attributes" do
     changeset = User.changeset(%User{}, @valid_attrs)

@@ -4,4 +4,6 @@ defmodule Webchat.LayoutView do
   def user_signed_in?(conn) do
     !!conn.assigns[:current_user]
   end
+
+
 end

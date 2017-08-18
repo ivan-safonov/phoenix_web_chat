@@ -50,7 +50,7 @@ config :phoenix, :stacktrace_depth, 20
 config :webchat, Webchat.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "12345678Aa",
+  password: "postgres",
   database: "webchat_dev",
   hostname: "localhost",
   pool_size: 10

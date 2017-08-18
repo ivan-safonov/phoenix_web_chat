@@ -1,4 +1,8 @@
-defmodule Webchat.PageControllerTest do
+{:ok, _, socket} =
+  socket("user:id", %{some_assigns: 1})
+  |> subscribe_and_join(RoomChannel, "room:lobby", %{"id" => 3})
+
+defmodule Webchat.RoomChannel do
   use Webchat.ConnCase
 
   test "GET /", %{conn: conn} do

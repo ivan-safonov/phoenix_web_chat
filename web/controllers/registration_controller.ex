@@ -12,6 +12,8 @@ defmodule Webchat.RegistrationController do
       {:ok, user} ->
         conn
         |> Guardian.Plug.sign_in(user)
+#        |> Plug.Conn.put_session(:user_id, user.id)
+#        |> Plug.Conn.assign(:current_user, user)
         |> redirect(to: "/")
       {:error, changeset} ->
         conn

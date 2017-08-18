@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :webchat, Webchat.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "12345678Aa",
+  password: "postgres",
   database: "webchat_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox

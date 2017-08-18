@@ -24,6 +24,9 @@
               <li><a href="/session/new">
                 Login
               </a></li>
+              <li><a href="/register">
+                Sign up
+              </a></li>
             <% end %>
           </ul>
         </nav>

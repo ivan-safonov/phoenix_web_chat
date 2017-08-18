@@ -3,8 +3,8 @@ defmodule Webchat.MessageTest do
 
   alias Webchat.Message
 
-  @valid_attrs %{}
-  @invalid_attrs %{}
+  @valid_attrs %{content: "hello world", user_id: "1"}
+  @invalid_attrs %{content: "", user_id: ""}
 
   test "changeset with valid attributes" do
     changeset = Message.changeset(%Message{}, @valid_attrs)
